@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mc1
+spec:
+  volumes:
+  - name: html
+    emptyDir: {}
+  containers:
+  - name: 1st-container
+    image: nginx
+  - name: 2nd-container
+    image: debian
+    command: ["/bin/sh", "-c"]
+    args:
+      - while true; do
+          date >> /tmp/a;
+          sleep 1;
+        done
