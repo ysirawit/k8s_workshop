@@ -39,11 +39,11 @@ spec:
           name: http
           protocol: TCP
         command: ["/bin/sh", "-c"]
-          args:
-            - while true; do
+        args:
+          - while true; do
               date >> /usr/share/nginx/html/index.html;
               sleep 1;
-              done
+            done
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
