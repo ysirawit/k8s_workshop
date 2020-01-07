@@ -38,12 +38,6 @@ spec:
         - containerPort: 8080
           name: http
           protocol: TCP
-        command: ["/bin/sh", "-c"]
-        args:
-          - while true; do
-              date >> /usr/share/nginx/html/index.html;
-              sleep 1;
-            done
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
