@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-bar
 spec:
+  rules:
   - host: bar.csp.local
     http:
       paths:
