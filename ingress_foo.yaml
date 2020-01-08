@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-foo
 spec:
+  rules:
   - host: foo.csp.local
     http:
       paths:
