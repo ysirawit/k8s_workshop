@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
   name: nginx-ingress
 spec:
-  backend:
-    serviceName: nginx-svc
-    servicePort: 80
+  - host: test.csp.local
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-svc
+          servicePort: 80
