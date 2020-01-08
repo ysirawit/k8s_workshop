@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: nfs-pvc
-  label:
+  labels:
     type: nfs-pvc
 spec:
   storageClassName: ""
