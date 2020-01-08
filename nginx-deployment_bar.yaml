@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     tag: bar
-  name: nginx-foo
+  name: nginx-bar
   namespace: default
 spec:
   progressDeadlineSeconds: 600
@@ -21,7 +21,7 @@ spec:
       containers:
       - image: nginx:1.15.11
         imagePullPolicy: IfNotPresent
-        name: nginx-foo
+        name: nginx-bar
         ports:
         - containerPort: 80
           name: http
