@@ -1,11 +1,11 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: nginx-ingress
+  name: ingress-bar
 spec:
-  - host: test.csp.local
+  - host: bar.csp.local
     http:
       paths:
       - backend:
-          serviceName: nginx-svc
+          serviceName: nginx-bar
           servicePort: 80

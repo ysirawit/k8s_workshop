@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-foo
+spec:
+  - host: foo.csp.local
+    http:
+      paths:
+      - backend:
+          serviceName: nginx-foo
+          servicePort: 80
