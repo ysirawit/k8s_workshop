@@ -4,6 +4,7 @@ metadata:
   name: nginx-bar
   namespace: default
 spec:
+  type: ClusterIP
   ports:
   - port: 80
     protocol: TCP
