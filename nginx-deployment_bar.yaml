@@ -19,7 +19,7 @@ spec:
         tag: bar
     spec:
       containers:
-      - image: nginx:1.15.11
+      - image: registry.nipa.cloud/workshop_k8s/nginx_bar
         imagePullPolicy: IfNotPresent
         name: nginx-bar
         ports:
