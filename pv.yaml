@@ -1,0 +1,15 @@
+apiVersion: 1
+kind: PersistentVolume
+metadata:
+  name: nfs-pv
+  label:
+    type: nfs
+spec:
+  capacity:
+    storage: 1Gi
+  storageClassName: ""
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 139.5.145.81
+    path: "/mnt/k8s_workshop"
