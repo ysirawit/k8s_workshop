@@ -4,14 +4,10 @@ metadata:
   name: nginx-svc
   namespace: default
 spec:
-  externalTrafficPolicy: Cluster
   ports:
   - port: 80
     protocol: TCP
     targetPort: 80
   selector:
     app.kubernetes.io/instance: nginx
-  sessionAffinity: None
-  type: NodePort
-status:
-  loadBalancer: {}
+
