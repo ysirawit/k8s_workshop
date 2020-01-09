@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: ingress-foo
+  name: ingress-foo-tls
 spec:
   tls:
   - hosts:
@@ -13,5 +13,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: nginx-svc
+          serviceName: nginx-foo
           servicePort: 80
