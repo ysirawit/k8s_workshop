@@ -22,10 +22,3 @@ spec:
       - image: amd64/debian:9.11
         imagePullPolicy: IfNotPresent
         name: debian-pv
-        volumeMounts:
-          - name: volume-mnt
-            mountPath: "/mnt"
-      volumes:
-      - name: volume-mnt
-        persistentVolumeClaim:
-          claimName: nfs-pvc
