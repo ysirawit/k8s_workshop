@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-foo
+spec:
+  tls:
+  - hosts:
+    - foo.csp.local
+    secretName: test-tls
+  rules:
+  - host: foo.csp.local
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: nginx-foo
+          servicePort: 80
