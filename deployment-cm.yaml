@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+  name: app-cm
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - image: nginx:latest
+        imagePullPolicy: IfNotPresent
+        name: app-cm
+        volumeMounts:
+          - name: config-mnt
+            mountPath: "/mnt"
+      volumes:
+      - name: config-mnt
+        configMap:
+          name: test-cm
