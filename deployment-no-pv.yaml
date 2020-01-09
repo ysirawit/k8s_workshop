@@ -3,22 +3,19 @@ kind: Deployment
 metadata:
   labels:
     app: debian
-  name: debian-pv
+  name: debian-no-pv
   namespace: default
 spec:
-  progressDeadlineSeconds: 600
   replicas: 1
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: debian
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: debian
     spec:
       containers:
       - image: amd64/debian:9.11
         imagePullPolicy: IfNotPresent
-        name: debian-pv
+        name: debian-no-pv
