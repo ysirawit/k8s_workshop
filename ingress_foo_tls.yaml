@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - foo.csp.local
+    - sslfoo.csp.local
     secretName: test-tls
   rules:
-  - host: foo.csp.local
+  - host: sslfoo.csp.local
     http:
       paths:
       - path: /
