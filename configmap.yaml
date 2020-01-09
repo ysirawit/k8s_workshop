@@ -3,8 +3,8 @@ kind: ConfigMap
 metadata:
   name: test-cm
 data:
-  name: testdata.txt
-  contents: |
+  one_line: The first file
+  multi_line: |
     you can store
     multiline content
     and configfiles
