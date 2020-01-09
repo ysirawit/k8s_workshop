@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: debian
-  name: debian-no-pv
+    app: nginx
+  name: app-no-pv
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: debian
+      app: nginx
   template:
     metadata:
       labels:
-        app: debian
+        app: nginx
     spec:
       containers:
-      - image: amd64/debian:9.11
+      - image: nginx:latest
         imagePullPolicy: IfNotPresent
-        name: debian-no-pv
+        name: app-no-pv

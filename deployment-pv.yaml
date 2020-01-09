@@ -2,23 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: debian
-  name: debian-pv
+    app: nginx
+  name: app-pv
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: debian
+      app: nginx
   template:
     metadata:
       labels:
-        app: debian
+        app: nginx
     spec:
       containers:
-      - image: amd64/debian:9.11
+      - image: nginx:latest
         imagePullPolicy: IfNotPresent
-        name: debian-pv
+        name: app-pv
         volumeMounts:
           - name: volume-mnt
             mountPath: "/mnt"
