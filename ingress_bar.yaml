@@ -11,3 +11,5 @@ spec:
         backend:
           serviceName: nginx-bar
           servicePort: 80
+status:
+  loadBalancer: {}
